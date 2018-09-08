@@ -2,7 +2,7 @@ module grid
   implicit none
 contains
   ! A subroutine to write output to a file
-  subroutine set_grid(dx,vlnt)
+  subroutine set_grid(dx,xlnt)
     real,    intent(in) :: dx,xlnt
     REAL, intent(out), allocatable, DIMENSION(:) :: x
     integer, intent(out) :: xvln

@@ -3,52 +3,45 @@ program hydr
 implicit none
 
 !Defining variable types
-REAL    :: xlnt,dt,dx,pi,ubo,lbo,v,tmax,t
-INTEGER    :: i,j,k,xvln,filenumber
-REAL, allocatable, DIMENSION(:) :: numn,numo
-REAL, allocatable, DIMENSION(:) :: x,u
+REAL    :: dt,pi,tmax,t,dx
+INTEGER    :: i,j,k,filenumber
+!REAL, allocatable, DIMENSION(:) :: numn,numo
+!REAL, allocatable, DIMENSION(:) :: x,u
 character(len=20) :: filename
 
 !!Defining variables
 !These values can be altered as required
 tmax=1
 xlnt=1
-v=1
 dx=0.001
 !These values should not be changed
 pi=4.D0*DATAN(1.D0)
 dt=0.5*dx/v
-lbo=.25
-ubo=.75
 t=0
 
 
-
-
-
-
+set_grid(dx,xlnt)
+set_init(xvln,numn)
 !Allocating the x and t vectors.
-allocate(x(xvln))
-allocate(numn(xvln))
-allocate(numo(xvln))
+!allocate(x(xvln))
+!allocate(numn(xvln))
+!allocate(numo(xvln))
 
 
 !Define x
-do i=1,xvln
-  xi(i) = (i-1)*dx
-enddo
+!do i=1,xvln
+!  xi(i) = (i-1)*dx
+!enddo
 
 
 !Initial Conditions
-do i=1,xvln
-  If (lbo<xi(i).AND.xi(i)<ubo) THEN
-    numn(i)=1
-  ELSE
-    numn(i)=0
-  ENDIF
-enddo
-
-
+!do i=1,xvln
+!  If (lbo<xi(i).AND.xi(i)<ubo) THEN
+!    numn(i)=1
+!  ELSE
+!    numn(i)=0
+!  ENDIF
+!enddo
 
 
 !xvln=xvln-1

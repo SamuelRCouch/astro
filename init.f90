@@ -2,7 +2,7 @@ module init
   implicit none
 contains
   ! A subroutine to write output to a file
-  subroutine set_init(i,xvln,numn)
+  subroutine set_init(xvln,numn)
     integer, intent(in) :: i,xvln
     real,    intent(in) :: x(xvln)
     REAL, intent(out),  DIMENSION(xvln) :: u
