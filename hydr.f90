@@ -4,7 +4,7 @@ implicit none
 
 !Defining variable types
 REAL    :: dt,pi,tmax,t,dx
-INTEGER    :: i,j,k,filenumber
+INTEGER    :: i,j,k,filenumber,xvln
 !REAL, allocatable, DIMENSION(:) :: numn,numo
 !REAL, allocatable, DIMENSION(:) :: x,u
 character(len=20) :: filename
@@ -20,7 +20,7 @@ dt=0.5*dx/v
 t=0
 xvln=NINT(xlnt/dx)
 
-set_grid(dx,xlnt)
+set_grid(dx,xvln)
 set_init(xvln,numn)
 !Allocating the x and t vectors.
 !allocate(x(xvln))
