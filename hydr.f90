@@ -21,7 +21,7 @@ t=0
 xvln=NINT(xlnt/dx)
 
 set_grid(dx,xvln)
-set_init(xvln,numn)
+set_init(xvln,x)
 !Allocating the x and t vectors.
 !allocate(x(xvln))
 !allocate(numn(xvln))
