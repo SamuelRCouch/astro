@@ -3,11 +3,11 @@ module grid
 contains
   ! A subroutine to write output to a file
   subroutine set_grid(dx,xlnt)
-    real,    intent(in) :: dx,xlnt
-    REAL, intent(out), allocatable, DIMENSION(:) :: x
-    integer, intent(out) :: xvln
+    real,    intent(in) :: dx,xvln
+    REAL, intent(out), allocatable, DIMENSION(:) :: x 
     INTEGER    :: i
-    xvln=NINT(xlnt/dx)
+
+    allocate(x(xvln))
     do i=1,xvln
       x(i) = (i-1)*dx
     enddo

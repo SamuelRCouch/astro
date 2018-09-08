@@ -18,7 +18,7 @@ dx=0.001
 pi=4.D0*DATAN(1.D0)
 dt=0.5*dx/v
 t=0
-
+xvln=NINT(xlnt/dx)
 
 set_grid(dx,xlnt)
 set_init(xvln,numn)
